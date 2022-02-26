@@ -1,13 +1,14 @@
 import { ColorModeScript } from "@chakra-ui/react"
 import * as React from "react"
 import ReactDOM from "react-dom"
-import App  from "./App"
 import reportWebVitals from "./reportWebVitals"
-
+import { App } from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Homepage from "./Components/Homepage";
+
 
 ReactDOM.render(
-  <App />,
+  <Homepage children={undefined} />,
   document.getElementById("root"),
 )
 
