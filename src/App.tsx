@@ -1,11 +1,13 @@
+
+import { ChakraProvider } from "@chakra-ui/react";
+import * as React from "react"
 import './App.css';
+import Homepage from "./Components/Homepage";
 
 function App() {
   return (
     <>
-      <div>
-        <h1>Hello, World!</h1>
-      </div>
+      <Homepage children={undefined}/>
     </>
   );
 }
