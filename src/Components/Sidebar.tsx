@@ -155,7 +155,7 @@ interface MobileProps extends FlexProps {
 const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
   return (
     <Flex
-      ml={{ base: 0, md: 60 }}
+      ml={{ base: 0, md: 60, lg: 0 }}
       px={{ base: 4, md: 4 }}
       height="60px"
       alignItems="center"
