@@ -40,11 +40,13 @@ interface LinkItemProps {
   icon: IconType;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Home', icon: FiHome },
-  { name: 'Trending', icon: FiTrendingUp },
-  { name: 'Explore', icon: FiCompass },
-  { name: 'Favourites', icon: FiStar },
-  { name: 'Settings', icon: FiSettings },
+  { name: 'Dashboard', icon: FiHome },
+  { name: 'Calender', icon: FiSettings },
+  { name: 'NC Status', icon: FiSettings },
+  { name: 'Template', icon: FiSettings },
+  { name: 'QR Code', icon: FiSettings },
+  { name: 'Questions', icon: FiSettings },
+  { name: 'Reports', icon: FiSettings },
 ];
 
 export default function SidebarWithHeader({
@@ -66,7 +68,8 @@ export default function SidebarWithHeader({
         onClose={onClose}
         returnFocusOnClose={false}
         onOverlayClick={onClose}
-        size="full">
+        size="full"
+        >
         <DrawerContent>
           <SidebarContent onClose={onClose} />
         </DrawerContent>
@@ -88,14 +91,15 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   return (
     <Box
       transition="3s ease"
-      bg={useColorModeValue('white', 'gray.900')}
+      bg={useColorModeValue('#F2A143', 'gray.900')}
       borderRight="1px"
+      borderRadius="50px"
       borderRightColor={useColorModeValue('gray.200', 'gray.700')}
       w={{ base: 'full', md: 60 }}
       pos="fixed"
       h="full"
       {...rest}>
-      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
+      <Flex h="20" alignItems="center" mx="8" justifyContent="center">
         <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
           Logo
         </Text>
@@ -125,8 +129,8 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
         role="group"
         cursor="pointer"
         _hover={{
-          bg: 'cyan.400',
-          color: 'white',
+          bg: 'white',
+          color: '#F2A143',
         }}
         {...rest}>
         {icon && (
@@ -134,7 +138,7 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
             mr="4"
             fontSize="16"
             _groupHover={{
-              color: 'white',
+              color: '#F2A143',
             }}
             as={icon}
           />
@@ -153,7 +157,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
     <Flex
       ml={{ base: 0, md: 60 }}
       px={{ base: 4, md: 4 }}
-      height="20"
+      height="60px"
       alignItems="center"
       bg={useColorModeValue('white', 'gray.900')}
       borderBottomWidth="1px"
@@ -177,12 +181,12 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       </Text>
 
       <HStack spacing={{ base: '0', md: '6' }}>
-        <IconButton
+        {/* <IconButton
           size="lg"
           variant="ghost"
           aria-label="open menu"
           icon={<FiBell />}
-        />
+        /> */}
         <Flex alignItems={'center'}>
           <Menu>
             <MenuButton
@@ -201,9 +205,9 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
                   alignItems="flex-start"
                   spacing="1px"
                   ml="2">
-                  <Text fontSize="sm">Justina Clark</Text>
+                  <Text fontSize="sm">Alan Lee </Text>
                   <Text fontSize="xs" color="gray.600">
-                    Admin
+                    Bengaluru
                   </Text>
                 </VStack>
                 <Box display={{ base: 'none', md: 'flex' }}>
@@ -214,11 +218,11 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
             <MenuList
               bg={useColorModeValue('white', 'gray.900')}
               borderColor={useColorModeValue('gray.200', 'gray.700')}>
-              <MenuItem>Profile</MenuItem>
-              <MenuItem>Settings</MenuItem>
-              <MenuItem>Billing</MenuItem>
+              <MenuItem>Dropdown1</MenuItem>
+              <MenuItem>Dropdown2</MenuItem>
+              <MenuItem>Dropdown3</MenuItem>
               <MenuDivider />
-              <MenuItem>Sign out</MenuItem>
+              <MenuItem>Sign Out</MenuItem>
             </MenuList>
           </Menu>
         </Flex>
