@@ -7,7 +7,9 @@ import {
 import { BrowserRouter as Router, Route,Link, Routes, Outlet } from 'react-router-dom'
 
 import Sidebar from "./Components/Sidebar";
-import Homepage from "./Components/Homepage";
+import Calender from './Components/Calender';
+import Dashboard from "./Components/Dashboard";
+import Test from './Components/Test';
 
 export const App = () => {
   
@@ -20,9 +22,10 @@ export const App = () => {
           
         <Routes>
           {/* Sidebar for the inclusive pages */}
-          <Route path='home' element={<Homepage />} />
-          <Route path='test' element={<Homepage/>} />
-          <Route path='pg' element={<Homepage/>} />
+          <Route path='dashboard' element={<Dashboard />} />
+          <Route path='calender' element={<Calender />} />
+          <Route path='test' element={<Test/>} />
+          <Route path='pg' element={<Test/>} />
 
         </Routes>
 
