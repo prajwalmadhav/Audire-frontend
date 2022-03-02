@@ -11,23 +11,28 @@ import {
   Button,
   Textarea,
   Heading,
+  Divider,
+  Center,
+  VStack,
 } from "@chakra-ui/react";
 
 export default function Component() {
   return (
     <>
+    
+        
       
-      <Box bg={useColorModeValue("gray.30", "inherit")} p={10} ml={{ lg:'400px' }}  >
         
-        
+      
 
-        <Box mt={[10, 0]} >
-          
+        <Box mr="-450px" ml="750px" mt="20px" >
           <SimpleGrid
             display={{ base: "initial", md: "grid", lg:"flex-end" }}
             columns={{ md: 3 , lg: 4}}
             spacing={{ md: 6 }}
           >
+              
+
               
             <GridItem mt={[5, null, 0]} colSpan={{ md: 2 }}>
               <chakra.form
@@ -36,6 +41,8 @@ export default function Component() {
                 rounded={[null, "md"]}
                 overflow={{ sm: "hidden" }}
               >
+
+                
                 <Stack
                   px={4}
                   py={5}
@@ -43,7 +50,7 @@ export default function Component() {
                   bg={useColorModeValue("white", "gray.700")}
                   spacing={6}
                 >
-
+                  
                   <Heading as='h3' size='md' mb="-20px" color="grey" fontSize='20px'>
                     Plan an Audit
                   </Heading>
@@ -286,7 +293,9 @@ export default function Component() {
       
 
         
-      </Box>
+      
+
+      
 
     </>
   );
