@@ -22,10 +22,10 @@ export const App = () => {
           
         <Routes>
           {/* Sidebar for the inclusive pages */}
-          <Route path='dashboard' element={<Dashboard />} />
-          <Route path='calender' element={<Calender />} />
-          <Route path='test' element={<Test/>} />
-          <Route path='pg' element={<Test/>} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/calender' element={<Calender />} />
+          <Route path='/test' element={<Test/>} />
+          <Route path='/pg' element={<Test/>} />
 
         </Routes>
 
