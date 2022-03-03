@@ -18,6 +18,7 @@
     "framer-motion": "^6.2.8",
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.2",
+    "react-calendar": "^3.7.0",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.2.1",
@@ -48,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-calendar": "^3.5.0"
   }
 }
