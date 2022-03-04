@@ -13,8 +13,10 @@ import {
   Heading,
   Flex,
 } from "@chakra-ui/react";
-import { useState } from "react";
-import Calendar from 'react-calendar';
+import { useCallback, useState } from "react";
+import { Calendar } from '@natscale/react-calendar';
+
+import './Calender.min.css';
 
 // function App() {
 //   const [date, setDate] = useState(new Date());
@@ -38,9 +40,18 @@ import Calendar from 'react-calendar';
 
 
 export default function Component() {
+  const [value, setValue] = useState();
+
+  const onChange = useCallback(
+    (value) => {
+      setValue(value);
+    },
+    [setValue],
+  );
   return (
     <>
       <Flex >
+         <Calendar value={value} onChange={onChange} />
         
         <Box  >   {/*  //Container of whole dashboard */}
           
