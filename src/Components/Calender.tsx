@@ -28,17 +28,25 @@ export default function Component() {
   );
   return (
     <>
-      <Flex >
-        <Box ml="300px" mt="70px">
-          <Calendar value={value} onChange={onChange} />
+      <Flex >                {/*  //Container of whole dashboard */}
+         <Box ml="300px" mr="70px" mt="30px"> {/* Calender component */}
+          <Calendar 
+            hideAdjacentDates 
+            startOfWeek={0} 
+            value={value} 
+            size={600} 
+            fontSize={30}
+            onChange={onChange} />
         </Box>
-        <Box  >   {/*  //Container of whole dashboard */}
+        <Box  >   {/*  //Container Plan an audit form  */}
           
-            <Box  ml="200px" mt="10px" >
+            <Box  ml="0px" mt="30px" >
               <SimpleGrid
-                display={{ base: "initial", md: "grid", lg:"initial" }}
-                columns={{ md: 3 , lg: 4}}
-                spacing={{ md: 6 }}
+                // display={{ base: "initial", md: "grid", lg:"initial" }}
+                // columns={{ md: 3 , lg: 4}}
+                // spacing={{ md: 6 }}  
+                width= '550px'  
+                
               >
                   
 
@@ -49,6 +57,7 @@ export default function Component() {
                     shadow="inner"
                     rounded={[null, "md"]}
                     overflow={{ sm: "hidden" }}
+
                   >
 
                     
@@ -58,17 +67,18 @@ export default function Component() {
                       p={[null, 6]}
                       bg={useColorModeValue("white", "gray.700")}
                       spacing={6}
+
                     >
                       
-                      <Heading as='h3' size='md' mb="-20px" color="grey" fontSize='20px'>
+                      <Heading  mb="-10px"  fontSize='25px'>
                         Plan an Audit
                       </Heading>
                       
-                      <SimpleGrid columns={6} spacing={6}>
+                      <SimpleGrid columns={6} spacing={6} >
 
                         {/* 1th row input form  */}
 
-                        <FormControl as={GridItem} colSpan={[6, 3]}>
+                        <FormControl as={GridItem} colSpan={[6, 3]} >
                           <FormLabel
                             htmlFor="first_name"
                             fontSize="lg"
