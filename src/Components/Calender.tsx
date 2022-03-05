@@ -15,29 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { useCallback, useState } from "react";
 import { Calendar } from '@natscale/react-calendar';
-
 import './Calender.min.css';
-
-// function App() {
-//   const [date, setDate] = useState(new Date());
-
-//   <Box >
-//           <div className='app'>
-//             <h1 className='text-center'>React Calendar</h1>
-//             <div className='calendar-container'>
-//               <Calendar onChange={setDate} value={date} />
-//             </div>
-//             <p className='text-center'>
-//               <span className='bold'>Selected Date:</span>{' '}
-//               {date.toDateString()}
-//             </p>
-//           </div>
-          
-
-//         </Box>
-
-// }
-
 
 export default function Component() {
   const [value, setValue] = useState();
@@ -51,11 +29,12 @@ export default function Component() {
   return (
     <>
       <Flex >
-         <Calendar value={value} onChange={onChange} />
-        
+        <Box ml="300px" mt="70px">
+          <Calendar value={value} onChange={onChange} />
+        </Box>
         <Box  >   {/*  //Container of whole dashboard */}
           
-            <Box  ml="760px" mt="10px" >
+            <Box  ml="200px" mt="10px" >
               <SimpleGrid
                 display={{ base: "initial", md: "grid", lg:"initial" }}
                 columns={{ md: 3 , lg: 4}}
