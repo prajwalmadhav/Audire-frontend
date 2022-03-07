@@ -95,7 +95,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       borderRight="1px"
       borderRadius="50px"
       borderRightColor={useColorModeValue('gray.200', 'gray.700')}
-      w={{ base: 'full', md: 60 }}
+      w={{ base: 'full', md: 60, lg: '200px' }}
       pos="fixed"
       h="full"
       {...rest}>
@@ -205,7 +205,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
                   alignItems="flex-start"
                   spacing="1px"
                   ml="2">
-                  <Text fontSize="sm">Alan Lee </Text>
+                  <Text fontSize="sm">ALAN Lee </Text>
                   <Text fontSize="xs" color="gray.600">
                     Bengaluru
                   </Text>

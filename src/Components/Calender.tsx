@@ -13,52 +13,49 @@ import {
   Heading,
   Flex,
 } from "@chakra-ui/react";
-import { useState } from "react";
-import Calendar from 'react-calendar';
-
-// function App() {
-//   const [date, setDate] = useState(new Date());
-
-//   <Box >
-//           <div className='app'>
-//             <h1 className='text-center'>React Calendar</h1>
-//             <div className='calendar-container'>
-//               <Calendar onChange={setDate} value={date} />
-//             </div>
-//             <p className='text-center'>
-//               <span className='bold'>Selected Date:</span>{' '}
-//               {date.toDateString()}
-//             </p>
-//           </div>
-          
-
-//         </Box>
-
-// }
-
+import { useCallback, useState } from "react";
+import { Calendar } from '@natscale/react-calendar';
+import './Calender.min.css';
 
 export default function Component() {
+  const [value, setValue] = useState();
+
+  const onChange = useCallback(
+    (value) => {
+      setValue(value);
+    },
+    [setValue],
+  );
   return (
     <>
-      <Flex >
-        
-        <Box  >   {/*  //Container of whole dashboard */}
+      <Flex >                {/*  //Container of whole dashboard */}
+         <Box ml="300px" mr="70px" mt="30px"> {/* Calender component */}
+          <Calendar 
+            hideAdjacentDates 
+            startOfWeek={0} 
+            value={value} 
+            size={600} 
+            fontSize={30}
+            onChange={onChange} />
+        </Box>
+        <Box  >   {/*  //Container Plan an audit form  */}
           
-            <Box  ml="760px" mt="10px" >
+            <Box  ml="0px" mt="30px" >
               <SimpleGrid
-                display={{ base: "initial", md: "grid", lg:"initial" }}
-                columns={{ md: 3 , lg: 4}}
-                spacing={{ md: 6 }}
+                // display={{ base: "initial", md: "grid", lg:"initial" }}
+                // columns={{ md: 3 , lg: 4}}
+                // spacing={{ md: 6 }}  
+                // width= '550px'  
+                
               >
-                  
 
-                  
                 <GridItem mt={[5, null, 0]} colSpan={{ md: 2 }}>
                   <chakra.form
                     method="POST"
                     shadow="inner"
                     rounded={[null, "md"]}
                     overflow={{ sm: "hidden" }}
+
                   >
 
                     
@@ -68,17 +65,18 @@ export default function Component() {
                       p={[null, 6]}
                       bg={useColorModeValue("white", "gray.700")}
                       spacing={6}
+
                     >
                       
-                      <Heading as='h3' size='md' mb="-20px" color="grey" fontSize='20px'>
+                      <Heading  mb="-10px"  fontSize='25px'>
                         Plan an Audit
                       </Heading>
                       
-                      <SimpleGrid columns={6} spacing={6}>
+                      <SimpleGrid columns={6} spacing={6} >
 
                         {/* 1th row input form  */}
 
-                        <FormControl as={GridItem} colSpan={[6, 3]}>
+                        <FormControl as={GridItem} colSpan={[6, 3]} >
                           <FormLabel
                             htmlFor="first_name"
                             fontSize="lg"
