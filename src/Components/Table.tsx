@@ -8,17 +8,19 @@ import {
   Stack,
   SimpleGrid,
   Heading,
+  IconButton,
+  ButtonGroup,
 } from "@chakra-ui/react";
+import { AiFillEdit } from "react-icons/ai";
 
 export default function Component() {
   const data = [
-    { id: "Segun Adebayo", date: "sage@chakra.com", audtyp : "Compliance", audsubtyp : "ISO", audname : "John Doe", dept : "Manufacturing" , status : "In progress" },
-    { id: "Segun Adebayo", date: "sage@chakra.com", audtyp : "Compliance", audsubtyp : "ISO", audname : "John Doe", dept : "Manufacturing" , status : "In progress" },
-    { id: "Segun Adebayo", date: "sage@chakra.com", audtyp : "Compliance", audsubtyp : "ISO", audname : "John Doe", dept : "Manufacturing" , status : "In progress" },
-    { id: "Segun Adebayo", date: "sage@chakra.com", audtyp : "Compliance", audsubtyp : "ISO", audname : "John Doe", dept : "Manufacturing" , status : "In progress" },
-    { id: "Segun Adebayo", date: "sage@chakra.com", audtyp : "Compliance", audsubtyp : "ISO", audname : "John Doe", dept : "Manufacturing" , status : "In progress" },
-    { id: "Segun Adebayo", date: "sage@chakra.com", audtyp : "Compliance", audsubtyp : "ISO", audname : "John Doe", dept : "Manufacturing" , status : "In progress" },
-    { id: "Segun Adebayo", date: "sage@chakra.com", audtyp : "Compliance", audsubtyp : "ISO", audname : "John Doe", dept : "Manufacturing" , status : "In progress" }
+    { id: "Aud73822", date: "21/09/2021", audtyp : "Compliance", audsubtyp : "ISO 9001-2005", audname : "John Doe", dept : "Manufacturing" , status : "In progress" },
+    { id: "Aud73822", date: "21/09/2021", audtyp : "Compliance", audsubtyp : "ISO 9001-2005", audname : "John Doe", dept : "Manufacturing" , status : "In progress" },
+    { id: "Aud73822", date: "21/09/2021", audtyp : "Compliance", audsubtyp : "ISO 9001-2005", audname : "John Doe", dept : "Manufacturing" , status : "In progress" },
+    { id: "Aud73822", date: "21/09/2021", audtyp : "Compliance", audsubtyp : "ISO 9001-2005", audname : "John Doe", dept : "Manufacturing" , status : "In progress" },
+    { id: "Aud73822", date: "21/09/2021", audtyp : "Compliance", audsubtyp : "ISO 9001-2005", audname : "John Doe", dept : "Manufacturing" , status : "In progress" },
+
 
   ];
   const dataColor = useColorModeValue("white", "gray.800");
@@ -34,33 +36,36 @@ export default function Component() {
       justifyContent="center"
       ml= {210}
       >
-     
+      
+      
       <Stack
         direction={{ base: "column" }}
         w="full"
         bg={{ md: bg }}
+
         
       >
-          <Flex
+         <Flex
               direction={{ base: "row", md: "column" , lg: "column" }}
           >
-            <Heading  mb="50px"  fontSize='25px'>
+            <Heading  mb="120px" mt={-50} fontSize='30px'>
               NC Status
             </Heading>
           </Flex>
-          
 
           <SimpleGrid
                 spacingY={3}
                 columns={{ base: 1, md: 3, lg: 7 }}
-                w={{ base: 120, md: "full" }}
+                w="full"
                 textTransform="uppercase"
                 bg={bg2}
                 color={"gray.500"}
-                py={{ base: 1, md: 4 }}
-                px={{ base: 2, md: 10 }}
+                py={{ base: 1, md: 4, lg: 4 }}
+                px={{ base: 2, md: 10 , lg: 15}}
                 fontSize="md"
                 fontWeight="hairline"
+                textAlign={"center"}
+
               >
                 <span>Identifier</span>
                 <span>Date</span>
@@ -78,16 +83,17 @@ export default function Component() {
               direction={{ base: "row", md: "column" , lg: "column" }}
               bg={dataColor}
               key={pid}
-              
             >
               
               <SimpleGrid
                 spacingY={3}
                 columns={{ base: 1, md: 3, lg: 7 }}
                 w="full"
-                py={2}
-                px={10}
+                py={{base: 2, md: 4, lg: 2}}
+                px={{base: 2, md: 10 , lg: 15}}
                 fontWeight="hairline"
+                textAlign={"center"}
+
               >
                 {/*  //for overflow of objects in table header
                  <chakra.span
@@ -103,13 +109,22 @@ export default function Component() {
                 <span>{audit.audsubtyp}</span>
                 <span>{audit.audname}</span>
                 <span>{audit.dept}</span>
-                <span>{audit.id}</span>
-                
+
+                <Flex justify={{ lg: "end" }}>
+                  <ButtonGroup variant="outline" size="sm" spacing={5} >
+                      {/* In Progress */}
+                      <span>{audit.status}</span>
+                    <IconButton colorScheme="orange" icon={<AiFillEdit />} aria-label={""}  />
+                  </ButtonGroup>
+                </Flex>
+
               </SimpleGrid>
             </Flex>
           );
         })}
       </Stack>
+
+
     </Flex>
   );
 }
