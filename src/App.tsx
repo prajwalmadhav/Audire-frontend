@@ -10,7 +10,8 @@ import Sidebar from "./Components/Sidebar";
 import Calender from './Components/Calender';
 import Dashboard from "./Components/Dashboard";
 import Test from './Components/Test';
-import { Table } from "react-bootstrap";
+import Table from "./Components/Table";
+
 
 export const App = () => {
   
