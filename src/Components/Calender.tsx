@@ -45,12 +45,10 @@ export default function Component() {
                 // display={{ base: "initial", md: "grid", lg:"initial" }}
                 // columns={{ md: 3 , lg: 4}}
                 // spacing={{ md: 6 }}  
-                width= '550px'  
+                // width= '550px'  
                 
               >
-                  
 
-                  
                 <GridItem mt={[5, null, 0]} colSpan={{ md: 2 }}>
                   <chakra.form
                     method="POST"
