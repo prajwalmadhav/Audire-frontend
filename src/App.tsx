@@ -10,7 +10,8 @@ import Sidebar from "./Components/Sidebar";
 import Calender from './Components/Calender';
 import Dashboard from "./Components/Dashboard";
 import Test from './Components/Test';
-import Table from "./Components/NcStatus";
+import NcStatus from "./Components/NcStatus";
+import Testing from "./Components/Test2";
 
 export const App = () => {
   
@@ -25,8 +26,11 @@ export const App = () => {
           {/* Sidebar for the inclusive pages */}
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/calender' element={<Calender />} />
+          <Route path='/ncstatus' element={<NcStatus />} />
+
           <Route path='/test' element={<Test/>} />
-          <Route path='/pg' element={<Table/>} />
+          <Route path='/pg' element={<Testing />} />
+
 
         </Routes>
 
