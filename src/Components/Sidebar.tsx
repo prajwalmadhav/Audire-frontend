@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import {
   IconButton,
   Avatar,
@@ -22,31 +22,22 @@ import {
   MenuItem,
   MenuList,
 } from '@chakra-ui/react';
-import {
-  FiHome,
-  FiTrendingUp,
-  FiCompass,
-  FiStar,
-  FiSettings,
-  FiMenu,
-  FiBell,
-  FiChevronDown,
-} from 'react-icons/fi';
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
+import { FaAlignJustify, FaAngleDown, FaCalendarAlt, FaChartLine, FaExclamationTriangle, FaFileAlt, FaQrcode, FaQuestionCircle, FaRegEdit } from "react-icons/fa";
 
 interface LinkItemProps {
   name: string;
   icon: IconType;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Dashboard', icon: FiHome },
-  { name: 'Calender', icon: FiSettings },
-  { name: 'NC Status', icon: FiSettings },
-  { name: 'Template', icon: FiSettings },
-  { name: 'QR Code', icon: FiSettings },
-  { name: 'Questions', icon: FiSettings },
-  { name: 'Reports', icon: FiSettings },
+  { name: 'Dashboard', icon: FaChartLine },
+  { name: 'Calender', icon: FaCalendarAlt },
+  { name: 'NC Status', icon: FaExclamationTriangle },
+  { name: 'Template', icon: FaRegEdit },
+  { name: 'QR Code', icon: FaQrcode },
+  { name: 'Questions', icon: FaQuestionCircle },
+  { name: 'Reports', icon: FaFileAlt },
 ];
 
 export default function SidebarWithHeader({
@@ -169,7 +160,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         onClick={onOpen}
         variant="outline"
         aria-label="open menu"
-        icon={<FiMenu />}
+        icon={<FaAlignJustify />}
       />
 
       <Text
@@ -211,7 +202,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
                   </Text>
                 </VStack>
                 <Box display={{ base: 'none', md: 'flex' }}>
-                  <FiChevronDown />
+                  <FaAngleDown />
                 </Box>
               </HStack>
             </MenuButton>
