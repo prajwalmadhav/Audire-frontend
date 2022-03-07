@@ -11,10 +11,6 @@ import Calender from './Components/Calender';
 import Dashboard from "./Components/Dashboard";
 import Test from './Components/Test';
 import Table from "./Components/Table";
-<<<<<<< HEAD
-=======
-
->>>>>>> b8a6b5c93a1a8dc3df8bda8d5ef32493e38303a6
 
 export const App = () => {
   
@@ -31,10 +27,6 @@ export const App = () => {
           <Route path='/calender' element={<Calender />} />
           <Route path='/test' element={<Test/>} />
           <Route path='/pg' element={<Table/>} />
-<<<<<<< HEAD
-=======
-
->>>>>>> b8a6b5c93a1a8dc3df8bda8d5ef32493e38303a6
 
         </Routes>
 
