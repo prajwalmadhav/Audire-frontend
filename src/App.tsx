@@ -10,7 +10,7 @@ import Sidebar from "./Components/Sidebar";
 import Calender from './Components/Calender';
 import Dashboard from "./Components/Dashboard";
 import Test from './Components/Test';
-import Table from "./Components/Table";
+import Table from "./Components/NcStatus";
 
 export const App = () => {
   
