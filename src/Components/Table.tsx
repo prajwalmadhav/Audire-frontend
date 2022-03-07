@@ -1,17 +1,20 @@
-import React from "react";
 import {
-  chakra,
   Flex,
   useColorModeValue,
-  Button,
-  useBreakpointValue,
   Stack,
   SimpleGrid,
   Heading,
   IconButton,
   ButtonGroup,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  HStack,
+  Box,
+  InputRightElement,
 } from "@chakra-ui/react";
 import { AiFillEdit } from "react-icons/ai";
+import { Search2Icon } from "@chakra-ui/icons";
 
 export default function Component() {
   const data = [
@@ -48,11 +51,35 @@ export default function Component() {
          <Flex
               direction={{ base: "row", md: "column" , lg: "column" }}
           >
-            <Heading  mb="120px" mt={-50} fontSize='30px'>
+            <Heading  mb={"4rem"} mt={-30} fontSize='30px'>
               NC Status
             </Heading>
           </Flex>
 
+          <Stack  >
+            <HStack spacing={10} mb={8} >
+              <Box >
+                <InputGroup>
+                  <InputRightElement
+                    pointerEvents='none'
+                    children={<Search2Icon color='gray.300' />}
+                  />
+                  <Input type='search' placeholder='Search' />
+                </InputGroup>
+              </Box>
+              <Box >
+                <InputGroup>
+                  <Input type='search' placeholder='Audit Type' />
+                </InputGroup>
+              </Box>
+              <Box >
+                <InputGroup>              
+                  <Input type='search' placeholder='Audit Sub-Type' />
+                </InputGroup>
+              </Box>
+            </HStack>
+          </Stack>
+          
           <SimpleGrid
                 spacingY={3}
                 columns={{ base: 1, md: 3, lg: 7 }}
@@ -65,7 +92,6 @@ export default function Component() {
                 fontSize="md"
                 fontWeight="hairline"
                 textAlign={"center"}
-
               >
                 <span>Identifier</span>
                 <span>Date</span>
@@ -75,7 +101,7 @@ export default function Component() {
                 <span>Department</span>
                 <span>Status</span>
 
-              </SimpleGrid>
+          </SimpleGrid>
 
         {data.map((audit, pid) => {
           return (
@@ -123,6 +149,7 @@ export default function Component() {
           );
         })}
       </Stack>
+      
 
 
     </Flex>
