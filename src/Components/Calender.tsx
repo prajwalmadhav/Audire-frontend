@@ -35,7 +35,7 @@ export default function Component() {
             startOfWeek={0} 
             value={value} 
             size={600} 
-            fontSize={30}
+            fontSize={35}
             onChange={onChange} />
         </Box>
         <Box  >   {/*  //Container Plan an audit form  */}
