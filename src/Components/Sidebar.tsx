@@ -29,15 +29,17 @@ import { FaAlignJustify, FaAngleDown, FaCalendarAlt, FaChartLine, FaExclamationT
 interface LinkItemProps {
   name: string;
   icon: IconType;
+  link?:string;
+
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Dashboard', icon: FaChartLine },
-  { name: 'Calender', icon: FaCalendarAlt },
-  { name: 'NC Status', icon: FaExclamationTriangle },
-  { name: 'Template', icon: FaRegEdit },
-  { name: 'QR Code', icon: FaQrcode },
-  { name: 'Questions', icon: FaQuestionCircle },
-  { name: 'Reports', icon: FaFileAlt },
+  { name: 'Dashboard', icon: FaChartLine , link:'dashboard' },
+  { name: 'Calender', icon: FaCalendarAlt , link:'calendar' },
+  { name: 'NC Status', icon: FaExclamationTriangle , link:'ncstatus'},
+  { name: 'Template', icon: FaRegEdit , link:'template' },
+  { name: 'QR Code', icon: FaQrcode , link:'qrcode' },
+  { name: 'Questions', icon: FaQuestionCircle , link:'questions' },
+  { name: 'Reports', icon: FaFileAlt , link:'report' },
 ];
 
 export default function SidebarWithHeader({
@@ -97,7 +99,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
+        <NavItem key={link.name} icon={link.icon} link={link.link}>
           {link.name}
         </NavItem>
       ))}
@@ -108,10 +110,13 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
 interface NavItemProps extends FlexProps {
   icon: IconType;
   children: ReactText;
+  link?: string;
+
+  
 }
-const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
+const NavItem = ({ icon, children, link, ...rest }: NavItemProps) => {
   return (
-    <Link href="#" style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+    <Link href={link} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
       <Flex
         align="center"
         p="4"
