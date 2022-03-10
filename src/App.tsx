@@ -11,10 +11,11 @@ import Calender from './Components/Calender';
 import Dashboard from "./Components/Dashboard";
 import Test from './Components/Test';
 import NcStatus from "./Components/NcStatus";
-import Reports from "./Components/Reports";
 import Qrcode from "./Components/Qrcode";
 import Questions from "./Components/Questions";
 import Template from "./Components/Template";
+import Reports from "./Components/Reports";
+
 
 export const App = () => {
   
