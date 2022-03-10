@@ -29,7 +29,7 @@ export const App = () => {
         <Routes>
           {/* Sidebar for the inclusive pages */}
           <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/calender' element={<Calender />} />
+          <Route path='/calendar' element={<Calender />} />
           <Route path='/ncstatus' element={<NcStatus />} />
           <Route path='/template' element={<Template />} />
           <Route path='/qrcode' element={<Qrcode />} />
@@ -45,4 +45,3 @@ export const App = () => {
     </ChakraProvider>
   );
 }
-
