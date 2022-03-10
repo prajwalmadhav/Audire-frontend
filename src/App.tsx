@@ -11,7 +11,10 @@ import Calender from './Components/Calender';
 import Dashboard from "./Components/Dashboard";
 import Test from './Components/Test';
 import NcStatus from "./Components/NcStatus";
-import Testing from "./Components/Test2";
+import Reports from "./Components/Reports";
+import Qrcode from "./Components/Qrcode";
+import Questions from "./Components/Questions";
+import Template from "./Components/Template";
 
 export const App = () => {
   
@@ -27,9 +30,12 @@ export const App = () => {
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/calender' element={<Calender />} />
           <Route path='/ncstatus' element={<NcStatus />} />
+          <Route path='/template' element={<Template />} />
+          <Route path='/qrcode' element={<Qrcode />} />
+          <Route path='/questions' element={<Questions />} />
+          <Route path='/reports' element={<Reports />} />
 
           <Route path='/test' element={<Test/>} />
-          <Route path='/pg' element={<Testing />} />
 
 
         </Routes>
