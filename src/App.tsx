@@ -14,7 +14,7 @@ import NcStatus from "./Components/NcStatus";
 import Qrcode from "./Components/Qrcode";
 import Questions from "./Components/Questions";
 import Template from "./Components/Template";
-import Reports from "./Components/Reports";
+import Report from "./Components/Report";
 
 
 export const App = () => {
@@ -34,7 +34,7 @@ export const App = () => {
           <Route path='/template' element={<Template />} />
           <Route path='/qrcode' element={<Qrcode />} />
           <Route path='/questions' element={<Questions />} />
-          <Route path='/reports' element={<Reports />} />
+          <Route path='/reports' element={<Report />} />
 
           <Route path='/test' element={<Test/>} />
 
