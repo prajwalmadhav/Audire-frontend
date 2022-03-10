@@ -15,6 +15,7 @@ import Qrcode from "./Components/Qrcode";
 import Questions from "./Components/Questions";
 import Template from "./Components/Template";
 import Report from "./Components/Report";
+import Settings from "./Components/Settings";
 
 
 export const App = () => {
@@ -35,6 +36,7 @@ export const App = () => {
           <Route path='/qrcode' element={<Qrcode />} />
           <Route path='/questions' element={<Questions />} />
           <Route path='/reports' element={<Report />} />
+          <Route path='/settings' element={<Settings />} />
 
           <Route path='/test' element={<Test/>} />
 
