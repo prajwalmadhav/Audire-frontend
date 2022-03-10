@@ -19,12 +19,10 @@ import {
   
   export default function Component() {
     const data = [
-      { id: "AAaa73822", date: "21/09/2021", audtyp : "Compliance", audsubtyp : "ISO 9001-2005", audname : "John Doe", dept : "Manufacturing" , status : " " },
       { id: "Aud73822", date: "21/09/2021", audtyp : "Compliance", audsubtyp : "ISO 9001-2005", audname : "John Doe", dept : "Manufacturing" , status : " " },
       { id: "Aud73822", date: "21/09/2021", audtyp : "Compliance", audsubtyp : "ISO 9001-2005", audname : "John Doe", dept : "Manufacturing" , status : " " },
       { id: "Aud73822", date: "21/09/2021", audtyp : "Compliance", audsubtyp : "ISO 9001-2005", audname : "John Doe", dept : "Manufacturing" , status : " " },
-      { id: "Aud73822", date: "21/09/2021", audtyp : "Compliance", audsubtyp : "ISO 9001-2005", audname : "John Doe", dept : "Manufacturing" , status : " " },
-  
+       
   
     ];
     const dataColor = useColorModeValue("white", "gray.800");
