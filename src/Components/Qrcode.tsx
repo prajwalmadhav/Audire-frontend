@@ -52,7 +52,7 @@ export default function Component() {
               direction={{ base: "row", md: "column" , lg: "column" }}
           >
             <Heading  mb={"4rem"} mt={-30} fontSize='30px'>
-              NC STATUS
+              Qr Code
             </Heading>
           </Flex>
 
