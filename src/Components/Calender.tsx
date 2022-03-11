@@ -29,13 +29,17 @@ export default function Component() {
   return (
     
       <Flex >                {/*  //Container of whole dashboard */}
-         <Box ml="280px" mr="70px" mt="30px"> {/* Calender component */}
+         <Box ml="280px" mr="70px" mt="-10px">
+         <Heading  mb="50px"  fontSize='25px'>
+                        Calendar
+                      </Heading>
+            {/* Calender component */}
           <Calendar 
             hideAdjacentDates 
             startOfWeek={0} 
             value={value} 
-            size={600} 
-            fontSize={35}
+            size={550} 
+            fontSize={25}
             onChange={onChange} />
         </Box>
 
@@ -43,6 +47,7 @@ export default function Component() {
         >   {/*  //Container Plan an audit form  */}
           
             <Box  ml="0px" mt="70px" >
+            
               <SimpleGrid
                 display={{ base: "initial", md: "grid",  }}
                 // columns={{ md: 3 , lg: 4}}
