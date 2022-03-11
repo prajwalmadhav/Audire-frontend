@@ -27,9 +27,9 @@ export default function Component() {
     [setValue],
   );
   return (
-    <>
+    
       <Flex >                {/*  //Container of whole dashboard */}
-         <Box ml="300px" mr="70px" mt="30px"> {/* Calender component */}
+         <Box ml="280px" mr="70px" mt="30px"> {/* Calender component */}
           <Calendar 
             hideAdjacentDates 
             startOfWeek={0} 
@@ -38,14 +38,16 @@ export default function Component() {
             fontSize={35}
             onChange={onChange} />
         </Box>
-        <Box  >   {/*  //Container Plan an audit form  */}
+
+        <Box 
+        >   {/*  //Container Plan an audit form  */}
           
-            <Box  ml="0px" mt="30px" >
+            <Box  ml="0px" mt="70px" >
               <SimpleGrid
-                // display={{ base: "initial", md: "grid", lg:"initial" }}
+                display={{ base: "initial", md: "grid",  }}
                 // columns={{ md: 3 , lg: 4}}
-                // spacing={{ md: 6 }}  
-                // width= '550px'  
+                spacing={{ lg: 5 }}  
+                width= {{lg:'550px'}} 
                 
               >
 
@@ -55,7 +57,6 @@ export default function Component() {
                     shadow="inner"
                     rounded={[null, "md"]}
                     overflow={{ sm: "hidden" }}
-
                   >
 
                     
@@ -68,7 +69,7 @@ export default function Component() {
 
                     >
                       
-                      <Heading  mb="-10px"  fontSize='25px'>
+                      <Heading  mt="-10px"  fontSize='25px'>
                         Plan an Audit
                       </Heading>
                       
@@ -82,6 +83,7 @@ export default function Component() {
                             fontSize="lg"
                             fontWeight="xl"
                             color={useColorModeValue("gray.700", "gray.50")}
+
                           >
                           </FormLabel>
                           <Input
@@ -94,6 +96,7 @@ export default function Component() {
                             shadow="sm"
                             size="sm"
                             w="full"
+                            h="40px"
                             rounded="md"
                             placeholder='Start Date'
 
@@ -119,8 +122,11 @@ export default function Component() {
                             shadow="sm"
                             size="sm"
                             w="full"
+                            h="40px"
+                            
                             rounded="md"
                             placeholder='End Date'
+                            
 
                           />
                         </FormControl>
@@ -147,6 +153,8 @@ export default function Component() {
                             shadow="sm"
                             size="sm"
                             w="full"
+                            h="40px"
+
                             rounded="md"
                             placeholder='Audit Type'
 
@@ -172,6 +180,8 @@ export default function Component() {
                             shadow="sm"
                             size="sm"
                             w="full"
+                            h="40px"
+
                             rounded="md"
                             placeholder='Audit Sub-type'
 
@@ -201,6 +211,8 @@ export default function Component() {
                             shadow="sm"
                             size="sm"
                             w="full"
+                            h="40px"
+
                             rounded="md"
                             placeholder='Department'
 
@@ -225,6 +237,8 @@ export default function Component() {
                             shadow="sm"
                             size="sm"
                             w="full"
+                            h="40px"
+
                             rounded="md"
                             placeholder='Auditor Name'
 
@@ -249,6 +263,8 @@ export default function Component() {
                             shadow="sm"
                             size="sm"
                             w="full"
+                            h="40px"
+
                             rounded="md"
                             placeholder='Country'
 
@@ -273,6 +289,8 @@ export default function Component() {
                             shadow="sm"
                             size="sm"
                             w="full"
+                            h="40px"
+
                             rounded="md"
                             placeholder='Location'
                             
@@ -285,6 +303,8 @@ export default function Component() {
                       focusBorderColor="brand.400"
                       shadow="sm"
                       rounded="md"
+                      h={{lg:"100px"}}
+
                     />
 
                     </Stack>
@@ -314,6 +334,6 @@ export default function Component() {
 
         </Box>
       </Flex>
-    </>
+    
   );
 }
