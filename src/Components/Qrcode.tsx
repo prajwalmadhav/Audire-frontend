@@ -44,7 +44,7 @@ export default function Component() {
               direction={{ base: "row", md: "column" , lg: "column" }}
           >
             <Heading  mb={"4rem"} mt={-30} fontSize='30px'>
-              Qr Code
+              QR Code
             </Heading>
           </Flex>
 
