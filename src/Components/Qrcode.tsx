@@ -84,18 +84,24 @@ export default function Component() {
             columns={{sm: 2, md: 3, lg: 4}} 
             spacing='60px' >
               {/* First qr box  */}
-            <Box bg='gray.50'
-              display='flex' 
-              maxW='lg'
-              alignItems='center'
-              justifyContent='center'
-              h='250px'
-              borderWidth='3px' 
-              borderRadius='lg' 
-              overflow='hidden' > 
-              <Image boxSize='250px'
-               src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7qLD3RFMHR87e774UkgOiIvhym2ed7O8_H8wJJhoo0MwuBIihYmLx0rqPyhvRoIWjfs&usqp=CAU' 
-               alt='Qr Code 1' />
+            <Box fontSize='xl' alignItems='center' justifyContent='center'>
+              {/* Compailance Audit */}
+            
+              <Box bg='gray.50'
+                display='flex' 
+                maxW='lg'
+                alignItems='center'
+                justifyContent='center'
+                h='250px'
+                borderWidth='3px' 
+                borderRadius='lg' 
+                overflow='hidden' > 
+                
+                <Image boxSize='250px'
+                src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7qLD3RFMHR87e774UkgOiIvhym2ed7O8_H8wJJhoo0MwuBIihYmLx0rqPyhvRoIWjfs&usqp=CAU' 
+                alt='Qr Code 1' />
+                  
+              </Box>
             </Box>
 
             {/* 2nd qr box  */}

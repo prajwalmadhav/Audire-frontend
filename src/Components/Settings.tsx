@@ -46,16 +46,20 @@ import { FaRegTimesCircle } from "react-icons/fa";
             <Stack
                 direction={{ base: "column" }}
                 w="full"
+                mr={5}
                 bg={{ md: bg }}
+                borderWidth='2px'
+
 
 
             >
+                <Heading mb={10} mt={-30} fontSize='30px'>
+                        Settings
+                    </Heading>
                 <Flex
                     direction={{ base: "row", md: "column", lg: "column" }}
                 >
-                    <Heading mb={"4rem"} mt={-30} fontSize='30px'>
-                        Settings
-                    </Heading>
+                    
                 </Flex>
 
                 <Stack>
@@ -74,12 +78,15 @@ import { FaRegTimesCircle } from "react-icons/fa";
                     fontSize="md"
                     fontWeight="hairline"
                     textAlign={"center"}
+                    alignItems="center"
+                    justifyContent="center"
                 >
 
                     {/* Users  */}
                     <span>Full Name</span>
-                    <span>Department</span>
+                    <span>Dept</span>
                     <span>Email ID</span>
+                    
 
 
 
@@ -138,7 +145,9 @@ import { FaRegTimesCircle } from "react-icons/fa";
                     direction={{ base: "column" }}
                     w="full"
                     bg={{ md: bg }}
-                    mt = {"70px"}
+                    mt = {0}
+                    borderWidth='2px'
+
 
 
                 >

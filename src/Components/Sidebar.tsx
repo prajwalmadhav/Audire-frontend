@@ -40,6 +40,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'QR Code', icon: FaQrcode , link:'qrcode' },
   { name: 'Questions', icon: FaQuestionCircle , link:'questions' },
   { name: 'Reports', icon: FaFileAlt , link:'reports' },
+
 ];
 
 export default function SidebarWithHeader({
@@ -201,7 +202,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
                   alignItems="flex-start"
                   spacing="1px"
                   ml="2">
-                  <Text fontSize="sm">ALAN Lee </Text>
+                  <Text fontSize="sm">Alan Lee </Text>
                   <Text fontSize="xs" color="gray.600">
                     Bengaluru
                   </Text>
@@ -216,7 +217,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
               borderColor={useColorModeValue('gray.200', 'gray.700')}>
               <MenuItem>Dropdown1</MenuItem>
               <MenuItem>Dropdown2</MenuItem>
-              <MenuItem>Dropdown3</MenuItem>
+              <MenuItem>Settings</MenuItem>
               <MenuDivider />
               <MenuItem>Sign Out</MenuItem>
             </MenuList>
