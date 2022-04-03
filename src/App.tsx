@@ -17,6 +17,7 @@ import Template from "./Components/Template";
 import Report from "./Components/Report";
 import Settings from "./Components/Settings";
 import LoginPage from "./Components/LoginPage";
+import AuditTemplates from "./Components/AuditTemplates";
 
 
 export const App = () => {
@@ -37,6 +38,8 @@ export const App = () => {
           <Route path='/calendar' element={<Calender />} />
           <Route path='/ncstatus' element={<NcStatus />} />
           <Route path='/template' element={<Template />} />
+          <Route path='/audittemplates' element={<AuditTemplates />} />
+
           <Route path='/qrcode' element={<Qrcode />} />
           <Route path='/questions' element={<Questions />} />
           <Route path='/reports' element={<Report />} />
