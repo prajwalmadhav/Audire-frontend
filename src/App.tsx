@@ -16,6 +16,7 @@ import Questions from "./Components/Questions";
 import Template from "./Components/Template";
 import Report from "./Components/Report";
 import Settings from "./Components/Settings";
+import LoginPage from "./Components/LoginPage";
 
 
 export const App = () => {
@@ -25,10 +26,13 @@ export const App = () => {
     <ChakraProvider theme={theme}>
         
       <Router>
+        
           <Sidebar children={undefined} />
           
         <Routes>
           {/* Sidebar for the inclusive pages */}
+          <Route path='/login' element={<LoginPage />} />
+          
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/calendar' element={<Calender />} />
           <Route path='/ncstatus' element={<NcStatus />} />
@@ -37,6 +41,7 @@ export const App = () => {
           <Route path='/questions' element={<Questions />} />
           <Route path='/reports' element={<Report />} />
           <Route path='/settings' element={<Settings />} />
+
 
           <Route path='/test' element={<Test/>} />
 
