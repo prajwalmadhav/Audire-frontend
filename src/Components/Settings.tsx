@@ -40,8 +40,9 @@ import { FaRegTimesCircle } from "react-icons/fa";
                 <Box
                     // direction={{ base: "column" }}
                     minH={'60vh'}
+                    pt={"50px"}
                     w="full"
-                    mr={5}
+                    mr={10}
                     bg={{ md: bg }}
                     borderWidth='2px'
                 >
@@ -135,6 +136,7 @@ import { FaRegTimesCircle } from "react-icons/fa";
                     // direction={{ base: "column" }}
                     minH={'60vh'}
                     w="full"
+                    pt={"50px"}
                     mr={5}
                     bg={{ md: bg }}
                     borderWidth='2px'
