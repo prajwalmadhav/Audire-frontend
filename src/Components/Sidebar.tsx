@@ -36,7 +36,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Dashboard', icon: FaChartLine , link:'dashboard' },
   { name: 'Calender', icon: FaCalendarAlt , link:'calendar' },
   { name: 'NC Status', icon: FaExclamationTriangle , link:'ncstatus'},
-  { name: 'Template', icon: FaRegEdit , link:'template' },
+  { name: 'Template', icon: FaRegEdit , link:'AuditTemplates' },
   { name: 'QR Code', icon: FaQrcode , link:'qrcode' },
   { name: 'Questions', icon: FaQuestionCircle , link:'questions' },
   { name: 'Reports', icon: FaFileAlt , link:'reports' },
