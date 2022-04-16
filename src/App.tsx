@@ -18,6 +18,8 @@ import Report from "./Components/Report";
 import Settings from "./Components/Settings";
 import LoginPage from "./Components/LoginPage";
 import AuditTemplates from "./Components/AuditTemplates";
+import CreateNewTemplate from "./Components/CreateNewTemplate";
+import ComplianceAudit from "./Components/ComplianceAudit";
 
 
 export const App = () => {
@@ -37,14 +39,14 @@ export const App = () => {
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/calendar' element={<Calender />} />
           <Route path='/ncstatus' element={<NcStatus />} />
-          <Route path='/template' element={<Template />} />
           <Route path='/audittemplates' element={<AuditTemplates />} />
 
           <Route path='/qrcode' element={<Qrcode />} />
           <Route path='/questions' element={<Questions />} />
           <Route path='/reports' element={<Report />} />
           <Route path='/settings' element={<Settings />} />
-
+          <Route path='/create' element={<CreateNewTemplate />} />
+          <Route path='/comp' element={<ComplianceAudit />} />
 
           <Route path='/test' element={<Test/>} />
 
