@@ -24,7 +24,7 @@ import {
   import { Search2Icon } from "@chakra-ui/icons";
 import { FiEdit2 } from "react-icons/fi";
 const data = {
-  name: 'Add New Template',
+  name: 'New Templates',
   date: 21,
   numReviews: 34
 };
@@ -78,8 +78,8 @@ const data = {
   
             
             <SimpleGrid 
-              columns={{sm: 2, md: 3, lg: 4}} 
-              spacing='60px'>
+              columns={{sm: 2, md: 3, lg: 4}}
+              spacing='100px'>
                 {/* First qr box  */}
               <Flex fontSize='xl' alignItems='center' ml={{base:0,lg:'15%'}} justifyContent='center'>
                 {/* Compailance Audit */}
@@ -98,7 +98,7 @@ const data = {
                 <Box
           bg={useColorModeValue('white', 'gray.800')}
           maxW="sm"
-          borderWidth="4px"
+          borderWidth="2px"
           borderColor="#707070"
           rounded="40px"
           shadow="sm"
@@ -133,7 +133,274 @@ const data = {
           </Box>
         </Box>
         
-              </Flex>             
+              </Flex>    
+
+              <Flex fontSize='xl' alignItems='center' ml={{base:0,lg:'15%'}} justifyContent='center'>
+                {/* Compailance Audit */}
+              
+                {/* <Box bg='gray.50'
+                  display='flex' 
+                  maxW='lg'
+                  alignItems='center'
+                  justifyContent='center'
+                  h='250px'
+                  borderWidth='3px' 
+                  borderRadius='50' 
+                  overflow='hidden' >
+
+                </Box> */}
+                <Box
+          bg={useColorModeValue('white', 'gray.800')}
+          maxW="sm"
+          borderWidth="2px"
+          borderColor="#707070"
+          rounded="40px"
+          shadow="sm"
+          position="relative">
+                      
+          <Box p="6">
+            
+            <Stack mt="1" justifyContent="space-between" alignContent="center">
+              <Box
+                fontSize="xl"
+                fontWeight="semibold"
+                as="h4"
+                lineHeight="tight"
+                isTruncated>
+                {data.name}
+              </Box>
+
+              <Box fontSize="lg" color={useColorModeValue('gray.800', 'white')}>
+                
+                {data.date.toFixed(2)}
+              </Box>
+
+              <Box
+                alignItems="center"
+                fontSize={'1.2em'}
+                >
+                <chakra.a href={'#'} display={'flex'} >
+                  <Icon as={FiEdit2} h={7} w={7} alignSelf={'center'} />
+                </chakra.a>
+              </Box>
+            </Stack>
+          </Box>
+        </Box>
+        
+              </Flex> 
+
+              <Flex fontSize='xl' alignItems='center' ml={{base:0,lg:'15%'}} justifyContent='center'>
+                {/* Compailance Audit */}
+              
+                {/* <Box bg='gray.50'
+                  display='flex' 
+                  maxW='lg'
+                  alignItems='center'
+                  justifyContent='center'
+                  h='250px'
+                  borderWidth='3px' 
+                  borderRadius='50' 
+                  overflow='hidden' >
+
+                </Box> */}
+                <Box
+          bg={useColorModeValue('white', 'gray.800')}
+          maxW="sm"
+          borderWidth="2px"
+          borderColor="#707070"
+          rounded="40px"
+          shadow="sm"
+          position="relative">
+                      
+          <Box p="6">
+            
+            <Stack mt="1" justifyContent="space-between" alignContent="center">
+              <Box
+                fontSize="xl"
+                fontWeight="semibold"
+                as="h4"
+                lineHeight="tight"
+                isTruncated>
+                {data.name}
+              </Box>
+
+              <Box fontSize="lg" color={useColorModeValue('gray.800', 'white')}>
+                
+                {data.date.toFixed(2)}
+              </Box>
+
+              <Box
+                alignItems="center"
+                fontSize={'1.2em'}
+                >
+                <chakra.a href={'#'} display={'flex'} >
+                  <Icon as={FiEdit2} h={7} w={7} alignSelf={'center'} />
+                </chakra.a>
+              </Box>
+            </Stack>
+          </Box>
+        </Box>
+        
+              </Flex>    
+              <Flex fontSize='xl' alignItems='center' ml={{base:0,lg:'15%'}} justifyContent='center'>
+                {/* Compailance Audit */}
+              
+                {/* <Box bg='gray.50'
+                  display='flex' 
+                  maxW='lg'
+                  alignItems='center'
+                  justifyContent='center'
+                  h='250px'
+                  borderWidth='3px' 
+                  borderRadius='50' 
+                  overflow='hidden' >
+
+                </Box> */}
+                <Box
+          bg={useColorModeValue('white', 'gray.800')}
+          maxW="sm"
+          borderWidth="2px"
+          borderColor="#707070"
+          rounded="40px"
+          shadow="sm"
+          position="relative">
+                      
+          <Box p="6">
+            
+            <Stack mt="1" justifyContent="space-between" alignContent="center">
+              <Box
+                fontSize="xl"
+                fontWeight="semibold"
+                as="h4"
+                lineHeight="tight"
+                isTruncated>
+                {data.name}
+              </Box>
+
+              <Box fontSize="lg" color={useColorModeValue('gray.800', 'white')}>
+                
+                {data.date.toFixed(2)}
+              </Box>
+
+              <Box
+                alignItems="center"
+                fontSize={'1.2em'}
+                >
+                <chakra.a href={'#'} display={'flex'} >
+                  <Icon as={FiEdit2} h={7} w={7} alignSelf={'center'} />
+                </chakra.a>
+              </Box>
+            </Stack>
+          </Box>
+        </Box>
+        
+              </Flex> 
+              <Flex fontSize='xl' alignItems='center' ml={{base:0,lg:'15%'}} justifyContent='center'>
+                {/* Compailance Audit */}
+              
+                {/* <Box bg='gray.50'
+                  display='flex' 
+                  maxW='lg'
+                  alignItems='center'
+                  justifyContent='center'
+                  h='250px'
+                  borderWidth='3px' 
+                  borderRadius='50' 
+                  overflow='hidden' >
+
+                </Box> */}
+                <Box
+          bg={useColorModeValue('white', 'gray.800')}
+          maxW="sm"
+          borderWidth="2px"
+          borderColor="#707070"
+          rounded="40px"
+          shadow="sm"
+          position="relative">
+                      
+          <Box p="6">
+            
+            <Stack mt="1" justifyContent="space-between" alignContent="center">
+              <Box
+                fontSize="xl"
+                fontWeight="semibold"
+                as="h4"
+                lineHeight="tight"
+                isTruncated>
+                {data.name}
+              </Box>
+
+              <Box fontSize="lg" color={useColorModeValue('gray.800', 'white')}>
+                
+                {data.date.toFixed(2)}
+              </Box>
+
+              <Box
+                alignItems="center"
+                fontSize={'1.2em'}
+                >
+                <chakra.a href={'#'} display={'flex'} >
+                  <Icon as={FiEdit2} h={7} w={7} alignSelf={'center'} />
+                </chakra.a>
+              </Box>
+            </Stack>
+          </Box>
+        </Box>
+        
+              </Flex> 
+              <Flex fontSize='xl' alignItems='center' ml={{base:0,lg:'15%'}} justifyContent='center'>
+                {/* Compailance Audit */}
+              
+                {/* <Box bg='gray.50'
+                  display='flex' 
+                  maxW='lg'
+                  alignItems='center'
+                  justifyContent='center'
+                  h='250px'
+                  borderWidth='3px' 
+                  borderRadius='50' 
+                  overflow='hidden' >
+
+                </Box> */}
+                <Box
+          bg={useColorModeValue('white', 'gray.800')}
+          maxW="sm"
+          borderWidth="2px"
+          borderColor="#707070"
+          rounded="40px"
+          shadow="sm"
+          position="relative">
+                      
+          <Box p="6">
+            
+            <Stack mt="1" justifyContent="space-between" alignContent="center">
+              <Box
+                fontSize="xl"
+                fontWeight="semibold"
+                as="h4"
+                lineHeight="tight"
+                isTruncated>
+                {data.name}
+              </Box>
+
+              <Box fontSize="lg" color={useColorModeValue('gray.800', 'white')}>
+                
+                {data.date.toFixed(2)}
+              </Box>
+
+              <Box
+                alignItems="center"
+                fontSize={'1.2em'}
+                >
+                <chakra.a href={'#'} display={'flex'} >
+                  <Icon as={FiEdit2} h={7} w={7} alignSelf={'center'} />
+                </chakra.a>
+              </Box>
+            </Stack>
+          </Box>
+        </Box>
+        
+              </Flex>       
                        
             </SimpleGrid>
   
