@@ -40,7 +40,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'QR Code', icon: FaQrcode , link:'qrcode' },
   { name: 'Questions', icon: FaQuestionCircle , link:'questions' },
   { name: 'Reports', icon: FaFileAlt , link:'reports' },
-
+  { name: 'Settings', icon: FaFileAlt , link:'settings' },
 ];
 
 export default function SidebarWithHeader({
